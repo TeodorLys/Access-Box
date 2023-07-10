@@ -13,11 +13,28 @@ It will return
 ```
 Programming mode is activated!
 ```
+To enter modes:
+```
+mode <mode_name> <arguments[-name value] ex. -ip 192.168.50.1>
+```
 To exit programming mode:
 ```
 exit prog mode
 ```
-To enter modes:
+
+## Modes
+### Default:
 ```
-mode <mode_name> <arguments[-name value] ex. -ip 192.168.50.1>
+mode default <arguments>
+```
+#### Available Arguments:
+
+### PingTest:
+```
+mode pingtest
+```
+#### Available Arguments:
+IP: what ip the ping function will use
+```
+mode pingtest -ip 192.168.1.1
 ```
