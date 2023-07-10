@@ -13,10 +13,12 @@ enter prog mode
 To enter modes:
 ```
 mode <mode_name> <arguments[-name value] ex. -ip 192.168.50.1>
+#RET: OK / FAILED: <MESSAGE>
 ```
 To exit programming mode:
 ```
 exit prog mode
+#RET: Programming mode is deactivated!
 ```
 
 ## Modes
