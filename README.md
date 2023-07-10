@@ -8,10 +8,7 @@ Pingtest: Displays the pinging ip address, average milliseconds and wan status.
 To enter programming mode on the ESP chip, send the command below to via UDP 
 ```
 enter prog mode
-```
-It will return
-```
-Programming mode is activated!
+#RET: Programming mode is activated!
 ```
 To enter modes:
 ```
