@@ -1,8 +1,15 @@
 # Access-Box
-A battery driven access-point for when troubleshooting networking. With integrated rs232 reader and ESP32-C3 chip
+A battery driven access-point for when troubleshooting networks. With integrated rs232 reader and ESP32-C3 chip
 ESP32 chip has a couple of modes;
 Default: Displays ESP ip address, gateway address, wan status and udp port for reading and writing to the RS232 port
 Pingtest: Displays the pinging ip address, average milliseconds and wan status.
+
+To initialize the UDP connection we need to tell the ESP32 chip what IP we are sending from.
+to do this we send the Init command and the password.
+
+```
+init <password>
+```
 
 ## Changing states and changing settings:
 To enter programming mode on the ESP chip, send the command below to via UDP 
