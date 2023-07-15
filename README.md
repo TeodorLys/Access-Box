@@ -8,7 +8,7 @@ To initialize the UDP connection we need to tell the ESP32 chip what IP we are s
 to do this we send the Init command and the password.
 
 ```
-init <password>
+init <password> <device name>
 ```
 
 ## Changing states and changing settings:
@@ -44,3 +44,17 @@ IP: what ip the ping function will use
 ```
 mode pingtest -ip 192.168.1.1
 ```
+### New WiFi:
+```
+mode newwifi
+```
+#### Available Arguments:
+SSID: what ssid it should connect to
+```
+mode newwifi -ssid Teodors
+```
+PSK: Password for the ssid
+```
+mode newwifi -psk abc123
+```
+
