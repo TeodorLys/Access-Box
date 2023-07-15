@@ -34,10 +34,10 @@ exit prog mode
 mode default <arguments>
 ```
 #### Available Arguments:
-
+NONE
 ### PingTest:
 ```
-mode pingtest
+mode pingtest <arguments>
 ```
 #### Available Arguments:
 IP: what ip the ping function will use
@@ -46,7 +46,7 @@ mode pingtest -ip 192.168.1.1
 ```
 ### New WiFi:
 ```
-mode newwifi
+mode newwifi <arguments>
 ```
 #### Available Arguments:
 SSID: what ssid it should connect to
