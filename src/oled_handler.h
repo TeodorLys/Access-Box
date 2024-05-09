@@ -16,16 +16,17 @@ struct oled_buffer {
 };
 
 
-
-U8G2_SSD1306_128X32_UNIVISION_1_SW_I2C u8g2(U8G2_R0, /* clock=*/9, /* data=*/8, /* reset=*/U8X8_PIN_NONE);
-
 class oled_handler {
 private:
-    oled_buffer draw_buffer[10];
+    static U8G2_SSD1306_128X32_UNIVISION_1_SW_I2C u8g2;//(U8G2_R0, /* clock=*/9, /* data=*/8, /* reset=*/U8X8_PIN_NONE);
+    static oled_buffer draw_buffer[];
 
 public:
     oled_handler() {}
-
+    static oled_handler get_instance() {
+        static oled_handler instance;
+        return instance; 
+    }
     void begin() {
         u8g2.begin();
         u8g2.enableUTF8Print();	
@@ -74,3 +75,5 @@ private:
         }
     }
 };
+
+#define oled oled_handler::get_instance()
